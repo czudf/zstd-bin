@@ -1,0 +1,31 @@
+# Build artifacts
+dist/
+build/
+*.egg-info/
+.pdm-build/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# zstd binaries and source
+zstd-*.tar.gz
+zstd-*/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
