@@ -1,0 +1,31 @@
+[project]
+name = "zstd-bin"
+version = "1.5.5"
+description = "Zstandard - Fast real-time compression algorithm"
+readme = "README.md"
+requires-python = ">=3.7"
+license = { file = "LICENSE" }
+authors = [{ name = "Todd Gao", email = "todd.gao.2013@gmail.com" }]
+keywords = ["zstd", "zstandard", "compression"]
+classifiers = [
+  "License :: OSI Approved :: BSD License",
+  "Programming Language :: C",
+  "Topic :: System :: Archiving :: Compression",
+]
+dependencies = []
+
+[project.urls]
+repository = "https://github.com/czudf/zstd-bin"
+homepage = "https://facebook.github.io/zstd/"
+
+[build-system]
+requires = ["pdm-backend", "wheel"]
+build-backend = "pdm.backend"
+
+[tool.pdm.build]
+is-purelib = false
+includes = ["zstd_bin.py", "LICENSE"]
+excludes = ["bin/*", ".gitignore", "zstd/*"]
+
+[tool.pdm.build.wheel-data]
+scripts = ["${BUILD_DIR}/bin/*"]
